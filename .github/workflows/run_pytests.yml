@@ -5,5 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: poetry install
-      - run: poetry run pytest
+      - name: install python
+        uses: actions/setup-python@v2
+      - name: install poetry
+        run: pip install poetry
+      - name: install dependences
+        run: poetry install
+      - name: run pytest
+        run: poetry run pytest
