@@ -11,7 +11,7 @@ jobs:
         run: pip install poetry
       - name: install dependences
         run: poetry install
-      - name: upgrade dependences
-        run: poetry update package
+      - name: upgrade pytest
+        run: poetry update package pytest
       - name: run pytest
         run: poetry run pytest
