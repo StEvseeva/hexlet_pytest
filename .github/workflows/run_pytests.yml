@@ -1,4 +1,4 @@
-name: hello-world
+name: pytest
 on: push
 jobs:
   build:
@@ -11,7 +11,5 @@ jobs:
         run: pip install poetry
       - name: install dependences
         run: poetry install
-      - name: upgrade pytest
-        run: poetry update package pytest
       - name: run pytest
         run: poetry run pytest
